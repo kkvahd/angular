@@ -1,0 +1,16 @@
+<form #addForm="ngForm" (ngSubmit)="add(addForm)">
+    <div class="form-group">
+        <label for="inputName">Email address</label>
+        <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Name" #name name="textName" ngModel required>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Location</label>
+        <input type="text" class="form-control" name="location" ngModel id="inputAddress" placeholder="Location" #location>
+    </div>
+    <div class="form-group">
+        <label for="inputTech">Technology</label>
+        <input type="text" class="form-control" id="inputTech" placeholder="Technology" #tech name="tech" ngModel>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addEmployee(name.value, location.value, tech.value)">Add</button>
+    <button class="btn btn-success">Submit</button>
+</form>

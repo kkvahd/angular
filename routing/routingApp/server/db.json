@@ -1,0 +1,69 @@
+{
+  "Employees": [
+    {
+      "id": 101,
+      "name": "Harish",
+      "location": "Delhi",
+      "technology": "Java"
+    },
+    {
+      "id": 102,
+      "name": "Ganesh",
+      "location": "Mumbai",
+      "technology": "Python"
+    },
+    {
+      "id": 103,
+      "name": "Bunty",
+      "location": "Bangalore",
+      "technology": ".NET"
+    },
+    {
+      "id": 104,
+      "name": "Rohit",
+      "location": "Delhi",
+      "technology": "Javascript"
+    },
+    {
+      "name": "Palash",
+      "location": "Dewas",
+      "technology": "oppp",
+      "id": 105
+    },
+    {
+      "name": "Palash",
+      "location": "Dewas",
+      "technology": "oppo",
+      "id": 106
+    },
+    {
+      "name": "Palash",
+      "location": "Dewas",
+      "technology": "oppp",
+      "id": 107
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fname": "pooo",
+      "lname": "oppo",
+      "email": "palashJRocks@gmail.con",
+      "password": "poop"
+    },
+    {
+      "fname": "abcd",
+      "lname": "efgh",
+      "email": "abcd@gmail.com",
+      "password": "abcd",
+      "id": 2
+    },
+    {
+      "fname": "krishna",
+      "lname": "gupte",
+      "email": "krishna@gmail.com",
+      "password": "gupta",
+      "id": 3
+    }
+  ]
+}

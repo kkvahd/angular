@@ -1,0 +1,51 @@
+<label>Water Sports</label>
+<div class="myFlex" fxLayout="row" fxLayoutAlign="space-evenly stretch">
+    <mat-card class="product-card" *ngFor='let product of waterSports'>
+        <mat-card-header>
+            <mat-card-title>{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{product.image}} (click)="imageClicked(product.name + product.id)" alt="Photo of {{product.name}}">
+        <mat-card-content>
+            <p>
+                {{product.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>View Product</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<label>Football</label>
+<div class="myFlex" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <mat-card class="product-card" *ngFor='let product of football'>
+        <mat-card-header>
+            <mat-card-title>{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{product.image}} (click)="imageClicked(product.name + product.id)" alt="Photo of {{product.name}}">
+        <mat-card-content>
+            <p>
+                {{product.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>View Product</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<label>Chess</label>
+<div class="myFlex" fxLayout="row" fxLayoutAlign="space-evenly center">
+    <mat-card class="product-card" *ngFor='let product of chess'>
+        <mat-card-header>
+            <mat-card-title>{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-sm-image src={{product.image}} (click)="imageClicked(product.name + product.id)" alt="Photo of {{product.name}}">
+        <mat-card-content>
+            <p>
+                {{product.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>View Product</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

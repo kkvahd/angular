@@ -1,0 +1,14 @@
+.product-card {
+    max-width: 200px;
+}
+
+
+/* .myFlex {
+    border-top: grey 0.5px solid;
+    border-bottom: grey 1px solid;
+} */
+
+label {
+    font-weight: bolder;
+    border-bottom: grey 0.5px solid;
+}

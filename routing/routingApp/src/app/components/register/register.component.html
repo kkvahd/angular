@@ -1,0 +1,71 @@
+<!-- <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group">
+        <input class="form-control" type="text" formControlName="fname" placeholder="First Name">
+        <input class="form-control" type="text" formControlName="lname" placeholder="Last Name">
+        <input class="form-control" type="text" formControlName="contact" placeholder="Contact Number">
+        <input class="form-control" type="password" formControlName="password" placeholder="Enter Password">
+        <button class="btn btn-primary">Sign In</button>
+        <button type="reset" class="btn btn-primary">Clear</button>
+    </div>
+</form> -->
+
+<form [formGroup]="signupForm" (ngSubmit)="register()">
+    <div class="form-group has-error">
+        <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="text" formControlName="EmailID">
+        <div *ngIf="signupForm.controls['EmailID'].touched && !signupForm.controls['EmailID'].valid">
+            <span *ngIf="signupForm.controls['EmailID'].hasError('required')">
+                Email Id is needed
+            </span>
+            <span *ngIf="signupForm.controls['EmailID'].hasError('email')">
+                Invalid Email ID
+            </span>
+        </div>
+    </div>
+    <div class="form-group has-success">
+        <input class="form-control input=lg" placeholder="Password" name="password" value="" type="password" formControlName="password">
+    </div>
+    <div class="form-group has-success">
+        <input class="form-control input=lg" placeholder="Confirm Password" name="confirmPassword" value="" type="password" formControlName="confirmPassword">
+        <div *ngIf="signupForm.controls['confirmPassword'].touched && !signupForm.controls['confirmPassword'].valid">
+            <span *ngIf="signupForm.controls['confirmPassword'].hasError('required')">
+                Password is required
+            </span>
+            <span *ngIf="signupForm.controls['confirmPassword'].hasError('passwordMatcher')">
+                Passwords must match.
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input class="form-control input-lg" placeholder="First Name" name="fname" type="text" formControlName="fname">
+        <div *ngIf="signupForm.controls['fname'].touched && !signupForm.controls['fname'].valid">
+            <span *ngIf="signupForm.controls['fname'].hasError('required')">
+                First Name is required
+            </span>
+            <span *ngIf="signupForm.controls['fname'].hasError('minlength')">
+                    Minimum length is 1
+            </span>
+            <span *ngIf="signupForm.controls['fname'].hasError('maxlength')">
+                    Max length is 15
+            </span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input class="form-control input-lg" placeholder="Last Name" name="lname" type="text" formControlName="lname">
+        <div *ngIf="signupForm.controls['lname'].touched && !signupForm.controls['lname'].valid">
+            <span *ngIf="signupForm.controls['lname'].hasError('required')">
+                    Last Name is required
+                </span>
+            <span *ngIf="signupForm.controls['lname'].hasError('minlength')">
+                        Minimum length is 1
+                </span>
+            <span *ngIf="signupForm.controls['lname'].hasError('maxlength')">
+                        Max length is 15
+                </span>
+        </div>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" [disabled]='!signupForm.valid'>Sign Up!</button>
+</form>
+<div>
+    <p>Already registered?</p>
+    <a routerLink="/login">login here</a>
+</div>

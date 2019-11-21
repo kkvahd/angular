@@ -1,0 +1,47 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-6">
+            <h2>MOVIES</h2>
+            <table class="table table-striped table-bordered table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Poster</th>
+                        <th>Title</th>
+                        <th>Add to Favourites?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies ; let i = index">
+                        <td #movieId>{{movie.id}}</td>
+                        <td> <img src={{movie.posterPath}} alt="" #moviePath></td>
+                        <td #movieTitle>{{movie.title}}</td>
+                        <td><button type="button" class="btn btn-info" (click)="addToFavs(movieId.innerText, moviePath.src, movieTitle.innerText)">Add To Favourites</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <h2>FAVOURITES</h2>
+            <table class="table table-striped table-bordered table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Poster</th>
+                        <th>Title</th>
+                        <th>Delete Movie?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of favs ; let i = index">
+                        <td #deleteMovieId>{{movie.id}}</td>
+                        <td> <img src={{movie.posterPath}} alt=""></td>
+                        <td>{{movie.title}}</td>
+                        <td><button type="button" class="btn btn-danger" (click)="deleteFav(deleteMovieId.innerText)">Delete</button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

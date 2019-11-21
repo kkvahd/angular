@@ -1,0 +1,27 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fname": "Employee1",
+      "lname": "Emp",
+      "email": "employee1@emp.com",
+      "password": "abcd"
+    },
+    {
+      "fname": "asdasd",
+      "lname": "sdfds",
+      "email": "asdasda@sdfsdf.ca",
+      "password": "abcd",
+      "id": 2
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "fname": "Karthik",
+      "lname": "Vanka",
+      "email": "admin1@admin.com",
+      "password": "admin"
+    }
+  ]
+}

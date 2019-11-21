@@ -1,0 +1,15 @@
+<h1>CART</h1>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            View my cart
+        </mat-expansion-panel-header>
+        <div *ngFor='let cartItem of cartItems'>
+            <div>
+                <img style="max-height: 80px; max-width: 80px;" src="../../{{cartItem.image}}" alt="">
+            </div>
+            <p>{{this.cartItem.name}}</p>
+        </div>
+        <button mat-flat-button color="accent" (click)="checkoutClicked()">Checkout</button>
+    </mat-expansion-panel>
+</mat-accordion>

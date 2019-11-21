@@ -1,0 +1,23 @@
+<h3>
+    List of Employees</h3>
+<div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+                <td #empId>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td><a [routerLink]="['/employees',{outlets:{'details':[emp.id]}}]" class=" btn btn-success">Details</a></td>
+                <td><button class="btn btn-danger" (click)=deleteEmployee(empId.innerText)>Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <a [routerLink]="['/employees/create']" class="btn btn-success">Add now</a> -->
+    <a [routerLink]="['/employees', {outlets:{'details':'create'}}]" class="btn btn-success">Add now</a>
+</div>
